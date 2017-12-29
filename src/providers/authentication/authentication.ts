@@ -14,7 +14,7 @@ export class AuthenticationProvider {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService) {
+    private messageService: MessageProvider) {
     console.log('Hello AuthenticationProvider Provider');
   }
 
