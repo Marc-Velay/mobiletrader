@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "MobiTrader",
+  "short_name": "MobiT",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

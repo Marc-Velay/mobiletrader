@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/do'
 
-import { User } from '../user/user-model';
-import { MessageProvider } from '../message/message';
+//import { User } from '../user/user-model';
+//import { MessageProvider } from '../message/message';
 
 const loginURL = 'http://86.64.78.32:30000/api/get-token/';
 
@@ -14,7 +14,8 @@ export class AuthenticationProvider {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageProvider) {
+    //private messageService: MessageProvider
+  ) {
     console.log('Hello AuthenticationProvider Provider');
   }
 

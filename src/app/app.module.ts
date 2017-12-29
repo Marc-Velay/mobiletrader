@@ -7,6 +7,14 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { HistoricalDisplayPage } from '../pages/historical-display/historical-display';
+import { ItemDetailsPage } from '../pages/item-details/item-details';
+import { ItemsPage } from '../pages/items/items';
+import { PortfolioPage } from '../pages/portfolio/portfolio';
+
+
 import { RestProvider } from '../providers/rest/rest';
 import { UserProvider } from '../providers/user/user';
 import { ItemProvider } from '../providers/item/item';
@@ -17,10 +25,18 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
 import { AuthGuardProvider } from '../providers/auth-guard/auth-guard';
 import { AlertProvider } from '../providers/alert/alert';
 
+//import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    DashboardPage,
+    HistoricalDisplayPage,
+    ItemDetailsPage,
+    ItemsPage,
+    PortfolioPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +46,13 @@ import { AlertProvider } from '../providers/alert/alert';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    DashboardPage,
+    HistoricalDisplayPage,
+    ItemDetailsPage,
+    ItemsPage,
+    PortfolioPage
   ],
   providers: [
     StatusBar,

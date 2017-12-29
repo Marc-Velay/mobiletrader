@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
-import { MessageProvider } from '../message/message';
+//import { MessageProvider } from '../message/message';
 import { Portfolio } from './portfolio-model'
 
 
@@ -13,7 +13,8 @@ export class PortfolioProvider {
 
   constructor(
     private http: Http,
-    private messageService: MessageProvider ) {
+    //private messageService: MessageProvider
+  ) {
     console.log('Hello PortfolioProvider Provider');
   }
 

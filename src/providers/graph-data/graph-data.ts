@@ -2,14 +2,11 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
 
-import { GraphDataPoint } from './graphData-model';
-import { MessageProvider } from '../message/message';
-/*
-  Generated class for the GraphDataProvider provider.
+//import { GraphDataPoint } from './graphData-model';
+//import { MessageProvider } from '../message/message';
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
+
+
 @Injectable()
 export class GraphDataProvider {
 
@@ -17,7 +14,8 @@ export class GraphDataProvider {
 
   constructor(
     private http: Http,
-    private messageService: MessageProvider ) {
+    //private messageService: MessageProvider
+  ) {
     console.log('Hello GraphDataProvider Provider');
   }
 
