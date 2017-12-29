@@ -1,22 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-/**
- * Generated class for the AlertComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
+import { AlertProvider } from '../../providers/alert/alert';
+
 @Component({
   selector: 'alert',
   templateUrl: 'alert.html'
 })
 export class AlertComponent {
 
-  text: string;
+  message: any;
 
-  constructor() {
+  constructor(private alertService: AlertProvider) {
     console.log('Hello AlertComponent Component');
-    this.text = 'Hello World';
   }
 
+  ngOnInit() {
+      this.alertService.getMessage().subscribe(message => { this.message = message; });
+  }
 }

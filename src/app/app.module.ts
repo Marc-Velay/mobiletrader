@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpClientModule }    from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -25,7 +26,10 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
 import { AuthGuardProvider } from '../providers/auth-guard/auth-guard';
 import { AlertProvider } from '../providers/alert/alert';
 
-//import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
+//import { AppRoutingModule }     from './app-routing.module';
+
+import { AlertComponent } from '../components/alert/alert'
+import { LoginComponent } from '../components/login/login'
 
 @NgModule({
   declarations: [
@@ -36,12 +40,15 @@ import { AlertProvider } from '../providers/alert/alert';
     HistoricalDisplayPage,
     ItemDetailsPage,
     ItemsPage,
-    PortfolioPage
+    PortfolioPage,
+    AlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

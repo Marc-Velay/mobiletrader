@@ -32,6 +32,7 @@ export class AuthenticationProvider {
                     userData.password = password;
                     localStorage.setItem('currentUser', JSON.stringify(userData));
                 }
+                console.log('hello');
                 console.log(JSON.parse(localStorage.getItem('currentUser')));
 
                 return userData;
