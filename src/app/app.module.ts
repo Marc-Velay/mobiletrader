@@ -7,10 +7,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
-import { HistoricalDisplayPage } from '../pages/historical-display/historical-display';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ItemsPage } from '../pages/items/items';
 import { PortfolioPage } from '../pages/portfolio/portfolio';
@@ -28,21 +26,27 @@ import { AlertProvider } from '../providers/alert/alert';
 
 //import { AppRoutingModule }     from './app-routing.module';
 
-import { AlertComponent } from '../components/alert/alert'
-import { LoginComponent } from '../components/login/login'
+import { AlertComponent } from '../components/alert/alert';
+import { LoginComponent } from '../components/login/login';
+import { ItemsComponent } from '../components/items/items';
+import { ItemDetailsComponent } from '../components/item-details/item-details';
+import { DashboardComponent } from '../components/dashboard/dashboard';
+import { PortfolioComponent } from '../components/portfolio/portfolio';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     LoginPage,
     DashboardPage,
-    HistoricalDisplayPage,
     ItemDetailsPage,
     ItemsPage,
     PortfolioPage,
     AlertComponent,
-    LoginComponent
+    LoginComponent,
+    ItemsComponent,
+    ItemDetailsComponent,
+    DashboardComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -53,10 +57,8 @@ import { LoginComponent } from '../components/login/login'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     LoginPage,
     DashboardPage,
-    HistoricalDisplayPage,
     ItemDetailsPage,
     ItemsPage,
     PortfolioPage

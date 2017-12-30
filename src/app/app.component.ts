@@ -3,10 +3,8 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
-import { HistoricalDisplayPage } from '../pages/historical-display/historical-display';
 import { ItemsPage } from '../pages/items/items';
 import { PortfolioPage } from '../pages/portfolio/portfolio';
 
@@ -30,11 +28,9 @@ export class MyApp {
     });
 
     this.pages = [
-      { title: 'Home', component: HomePage },
       { title: 'Dashboard', component: DashboardPage },
       { title: 'List of all items', component: ItemsPage },
       { title: 'Portfolio', component: PortfolioPage },
-      { title: 'HistoricalDisplayPage', component: HistoricalDisplayPage },
       { title: 'logout', component: LoginPage }
     ];
   }

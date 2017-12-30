@@ -1,0 +1,15 @@
+<h2>Available Items</h2>
+
+<!--<ul class="items">
+  <li *ngFor="let item of items">
+    <a routerLink="/detail/{{item.id}}">
+      <span class="badge">{{item.id}}</span> {{item.name}}
+    </a>
+  </li>
+</ul>-->
+
+<ion-list class="items">
+  <a ion-item *ngFor="let item of items" (click)="openPage(item.id)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+  </a>
+</ion-list>
