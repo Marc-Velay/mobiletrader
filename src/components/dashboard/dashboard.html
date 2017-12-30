@@ -1,4 +1,19 @@
-<!-- Generated template for the DashboardComponent component -->
+<h2>List of top items:</h2>
+<br>
+<!--
 <div>
-  {{text}}
+  <a *ngFor="let item of topItems" class="itemList"
+      routerLink="/detail/{{item.id}}">
+    <div class="module2">
+      <h4>{{item.name}}</h4>
+    </div>
+  </a>-->
+<div>
+  <ion-list class="itemList">
+    <a ion-item *ngFor="let item of topItems" (click)="openPage(item.id)">
+      <div class="module2">
+        <h4>{{item.name}}</h4>
+      </div>
+    </a>
+  </ion-list>
 </div>
