@@ -19,5 +19,9 @@ export class DashboardComponent implements OnInit {
     console.log('Hello DashboardComponent Component');
     this.text = 'Hello World';
   }
+  
+  ngOnInit() {
+
+  }
 
 }

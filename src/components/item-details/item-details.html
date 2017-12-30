@@ -1,4 +1,17 @@
-<!-- Generated template for the ItemDetailsComponent component -->
-<div>
-  {{id}}
+<div *ngIf="item">
+  <button *ngIf="!added" (click)="add()">Add to portfolio</button>
+  <alert></alert>
+  <h2>{{ item.name | uppercase }} Details</h2>
+  <div>
+    <label>id: {{ item.id }}
+    </label>
+  </div>
+  <div>
+    <label>source: {{ item.source }}
+    </label>
+  </div>
+  <div>
+    <label>instance type: {{ item.inst_type }}
+    </label>
+  </div>
 </div>

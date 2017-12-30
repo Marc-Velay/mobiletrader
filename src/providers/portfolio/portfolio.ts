@@ -32,12 +32,13 @@ export class PortfolioProvider {
   }
 
   //Add item to the portfolio using portfolio ID and item ID.
-  addToPortfolio(itemID: number) {
+  addToPortfolio(itemID: number): any {
     const url = `${this.portfolioUrl}/item/link/${itemID}/`;
     //If the user hasnt visited the page 'portfolio' yet, he doesnt have the portfolio ID,
     //We need to query it before updating its item list.
+    console.log('made it to here');
     if(!localStorage.getItem('portfolio')) {
-      this.getPortfolio(JSON.parse(localStorage.getItem('currentUser')))
+      this.getPortfolio(JSON.parse(localStorage.getItem('currentUser')).id)
       .subscribe(portfolio => {
           //When we receive the portfolio, we get its ID and update it with the new item.
           this.portfolio = portfolio;
@@ -50,7 +51,10 @@ export class PortfolioProvider {
       const body = { "id": this.portfolio.id };
       return this.http.post(url, body, this.jwt()).map((response: Response) => response.json());
     }
+    console.log('in service');
   }
+
+
   //Remove an item from a portfolio using portfolio ID and item ID
   removeFromPortfolio(itemID: number) {
     const url = `${this.portfolioUrl}/item/remove/${itemID}/`;
