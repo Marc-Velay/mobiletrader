@@ -1,4 +1,27 @@
-<!-- Generated template for the PortfolioComponent component -->
+<div *ngIf="portfolio">
+  <h2>{{ portfolio.name }} Details</h2>
+  <div>
+    <label>Portfolio name:
+      <input [(ngModel)]="portfolio.name" placeholder="name"/>
+    </label>
+    <button (click)="save()">save</button><br>
+    <alert></alert>
+  </div><br>
+
+
 <div>
-  {{text}}
+  <h3>Your items:</h3>
+
+  <ion-list class="items">
+    <div ion-item *ngFor="let item of portfolio.items" >
+      <a (click)="openPage(item.id)">
+        <span class="badge">{{item.id}} | </span> {{item.name}}
+      </a>
+      <button class="delete" title="delete item"
+      (click)="delete(item)" style="float: right;">x</button>
+    </div>
+  </ion-list>
+
+  <p *ngIf="portfolio.items?.length == 0">You do not have any items in your portfolio!</p>
+
 </div>
